@@ -49,7 +49,8 @@ public class NewMain3
 {
     public static void main(String[]args)
     {
-        int n,i,a,v;
+        int n,i,a,v,ch;
+        
         String b,s,p,on,oa;
         Scanner scan=new Scanner(System.in);
         System.out.println("Enter no. of Details: ");
@@ -74,9 +75,23 @@ public class NewMain3
             oa=scan.next();
             obj[i] = new PrivateVehicle(i,a,b,v,s,p,on,oa);
         }
-        System.out.println("Transport Vehicle Details");
-       //bj[i].details_tv();
-        System.out.println("Private Vehicle Details");
         
+        System.out.println("Enter Number for Transport Vehicle Details: ");
+        ch=scan.nextInt();
+        for(i=0;i<n;i++)
+        {
+              if(i==ch)
+              {
+                  obj[i].details_tv();
+              }
+        System.out.println("Enter Number for Private Vehicle Details: ");
+        ch=scan.nextInt();
+        for(i=0;i<n;i++)
+        {
+              if(i==ch)
+              {
+                  obj[i].details_pv();
+              }
+          }
     }
 }
