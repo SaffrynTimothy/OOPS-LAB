@@ -32,10 +32,10 @@ public class DistanceFromAverageWithExceptionHandling
         double[] values=new double[array_size];
         for(i=0;i<array_size;i++)
         {
+            System.out.println("Enter Element");
+            ele=s.nextDouble();
             try
             {
-                System.out.println("Enter Element");
-                ele=s.nextDouble();
                 if(ele%1==0)
                 {
                     values[i]=ele;
@@ -69,4 +69,6 @@ public class DistanceFromAverageWithExceptionHandling
         System.out.println("Average Distance: "+avg);
     }   
 }
+}
+
 
