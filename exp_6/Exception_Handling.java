@@ -49,16 +49,24 @@ public class DistanceFromAverageWithExceptionHandling
             {
                 System.out.println(e);
             }
-        }
         for(i=0;i<array_size;i++)
         {
-            if(values[i+1]%1==0)
+            try
             {
-                diff=values[i]-values[i+1];
-                avg=avg+values[i];
+                
+                if(values[i+1]%1==0)
+                {
+                    diff=values[i]-values[i+1];
+                    avg=avg+values[i];
+                }
+                System.out.println("The Distance between "+values[i]+" and "+values[i+1]+"is: "+diff);
             }
-            System.out.println("The Distance between "+values[i]+" and "+values[i+1]+"is: "+diff);
+            catch(ArrayIndexOutOfBoundsException e)
+            {
+                System.out.println("");
+            }
         }
         System.out.println("Average Distance: "+avg);
     }   
 }
+
